@@ -10,7 +10,7 @@ class RepliqDb < Formula
   def install
     # Install the npm package into libexec
     system "npm", "install", "--global", "--prefix=#{libexec}", cached_download
-
+    
     # Symlink the CLI executable to bin
     bin.install_symlink Dir["#{libexec}/bin/repliq-db"]
   end
