@@ -8,10 +8,11 @@ class RepliqDb < Formula
   depends_on "node"
 
   def install
-    # Install the npm package into libexec
-    system "npm", "install", "--global", "--prefix=#{libexec}", cached_download
+    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    bin.install_symlink Dir["#{libexec}/bin/*"]
+  end
 
-    # Symlink the CLI executable to bin
-    bin.install_symlink Dir["#{libexec}/bin/repliq-db"]
+  test do
+    system "#{bin}/repliq-db", "--version"
   end
 end
