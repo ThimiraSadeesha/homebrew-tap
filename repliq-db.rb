@@ -2,7 +2,7 @@ class RepliqDb < Formula
   desc "MySQL database backup and copy CLI tool"
   homepage "https://github.com/ThimiraSadeesha/db-backup-cli"
   url "https://registry.npmjs.org/repliq-db/-/repliq-db-1.0.3.tgz"
-  sha256 "49ec8a7879523f75e65e0ace03b6ddb6a0f89b0a6bb1807a4ff66441f6e51f5c"
+  sha256 "1b9f10e4effee036986ee10182998ff321cf9fed57374adf3ffc6074b83661cd"
   license "MIT"
 
   depends_on "node"
